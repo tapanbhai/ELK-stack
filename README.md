@@ -55,7 +55,7 @@ The configuration details of each machine may be found below.
 
 | Name     	 | Function 	| IP Address | Operating System |
 |----------	 |----------	|------------|------------------|
-| Jump Box 	 | Gateway  	| 10.0.0.1   | Linux            |
+| Jump Box 	 | Gateway  	| 10.0.0.7   | Linux            |
 | Web1=DVWA1     | Web server   | 10.0.0.8   | Linux            |
 | Web2=DVWA2     | Web server   | 10.0.0.9   | Linux            |
 | vmelk1=ELK     | Monitoring   | 10.1.0.4   | Linux            |
