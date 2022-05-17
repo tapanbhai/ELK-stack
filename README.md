@@ -67,3 +67,12 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the jumpbox webserver machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _20.211.22.97= public ip of Jumpbox: Whitelisted IP addresses : Home ip addr, pvt ip of web1 = 10.0.0.8, web2 = 10.0.0.9 & vmelk1 = 10.1.0.4
+
+
+Machines within the network can only be accessed by jumpbox webserver machine.
+- 
+Which machine did you allow to access your ELK VM?
+
+The Jumpbox, Web1 & Web2 = Jumpbox, DVWA1 & DVWA2 via SSH port22
+
+What was its IP address?_pvt ip 10.0.0.7, 10.0.0.8 & 10.0.0.9
