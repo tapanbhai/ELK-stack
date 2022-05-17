@@ -76,3 +76,12 @@ Which machine did you allow to access your ELK VM?
 The Jumpbox, Web1 & Web2 = Jumpbox, DVWA1 & DVWA2 via SSH port22
 
 What was its IP address?_pvt ip 10.0.0.7, 10.0.0.8 & 10.0.0.9
+
+A summary of the access policies in place can be found in the table below.
+
+| Name     	| Publicly Accessible | Allowed IP Addresses |
+|----------	|---------------------|----------------------|
+| Jump Box 	| 	Yes           | My public IP         |
+| Web1=DVWA1    |     	NO            | 10.0.0.1-254         |
+| Web2=DVWA2    |       NO            | 10.0.0.1-254         |
+| ELKVM		|  	NO	      | 10.0.0.1-254	     |
