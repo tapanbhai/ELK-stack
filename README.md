@@ -61,3 +61,9 @@ The configuration details of each machine may be found below.
 | vmelk1=ELK     | Monitoring   | 10.1.0.4   | Linux            |
 
 
+### Access Policies
+
+The machines on the internal network are not exposed to the public Internet. 
+
+Only the jumpbox webserver machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- _20.211.22.97= public ip of Jumpbox: Add whitelisted IP addresses dont share home ip addr (pvt ip of web1, web2 & vmelk1) 10.0.0.8, 10.0.0.9, 10.1.0.4
