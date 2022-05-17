@@ -16,4 +16,3 @@ This document contains the following details:
 o	Beats in Use
 o	Machines Being Monitored
 •	How to Use the Ansible Build
-
