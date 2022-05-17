@@ -84,7 +84,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     	| Publicly Accessible | Allowed IP Addresses |
 |----------	|---------------------|----------------------|
-| Jump Box 	| 	Yes           | My public IP         |
-| Web1=DVWA1    |     	NO            | 10.0.0.1-254         |
-| Web2=DVWA2    |       NO            | 10.0.0.1-254         |
-| ELKVM		|  	NO	      | 10.0.0.1-254	     |
+| Jump Box 	| 	Yes           | My public IP  SSH22     |
+| Web1=DVWA1    |     	NO            | 10.0.0.1-254  SSH22     |
+| Web2=DVWA2    |       NO            | 10.0.0.1-254  SSH22     |
+| ELKVM		|  	NO	      | 10.0.0.1-254  TCP5601	     |
