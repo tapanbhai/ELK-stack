@@ -39,6 +39,7 @@ What is the advantage of a jump box?
 
 •	When a jump box is used, its hidden benefit is that any tools in place for the SAN system are maintained on that single system. Therefore, when an update to the SAN management software is available, only a single system requires the update. A Jump Box Provisioner is also important as it prevents Azure VMs from being exposed via a public IP Address.
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the Data and System logs.
+
 •	What does Filebeat watch for?
 Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing
 
