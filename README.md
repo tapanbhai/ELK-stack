@@ -204,6 +204,7 @@ The playbook implements the following tasks:
 ## Target Machines & Beats
 
 This ELK server is configured to monitor the following machines: List the IP addresses of the machines you are monitoring
+
 •	Web-1: 10.1.0.8
 
 •	Web-2: 10.1.0.9
@@ -238,3 +239,75 @@ SSH into the control node and follow the steps below:
 •	Run the playbook, and navigate to kibana((Users IP address):5601 to check that the installation worked as expected.
 
 
+## ELK VM Configuration
+
+•	Run the playbook using this command : ansible-playbook /etc/ansible/install-elk.yml
+
+•	/etc/ansible/hosts file (IP of the Virtual Machines).
+
+
+## For Filebeat
+
+## Download Filebeat playbook usng this command:
+
+```
+- Run: curl -L -O https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/filebeat-config.yml
+```
+
+•	Copy the - Filebeat-Config Config file to /etc/ansible
+
+•	Update the filebeat-config.yml file to include the ELK private IP 10.1.0.8 as below from root@9ddf6fe7eb3f:~# nano /etc/ansible/filebeat-config.yml
+
+## Configuration
+
+```
+output.elasticsearch:
+  Boolean flag to enable or disable the output module.
+  enabled: true
+
+ Array of hosts to connect to.
+ Scheme and port can be left out and will be set to the default (http and 9200)
+ In case you specify and additional path, the scheme is required: http://localhost:9200/path
+ IPv6 addresses should always be defined as: https://[2001:db8::1]:9200
+ hosts: ["localhost:9200"]
+ username: "elastic"
+ "changeme" # TODO: Change this to the password you set
+ Starting with Beats version 6.0.0, the dashboards are loaded via the Kibana API.
+ This requires a Kibana endpoint configuration.
+ setup.kibana:
+  host: "10.0.0.8:5601" #### TODO: Change this to the IP address of your ELK server
+
+```
+
+## For MetricBeat
+
+## Download MetricBeat playbook usng this command
+
+```
+Run: curl -L -O https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/metricbeat > /etc/ansible/metricbeat-config.yml
+```
+
+## Configuration
+
+```
+============================== Kibana =====================================
+  Starting with Beats version 6.0.0, the dashboards are loaded via the Kibana API.
+  This requires a Kibana endpoint configuration.
+  setup.kibana:
+  	host: "10.0.0.5:5601" 
+  	
+  -------------------------- Elasticsearch output ------------------------------ 
+  output.elasticsearch: 
+  - TODO: Change the hosts IP address to the IP address of your ELK server 
+  - TODO: Change password from `changem` to the password you created 
+   hosts: ["10.0.0.5:9200"] 
+   username: "elastic" 
+   password: "changeme"
+   
+   ```
+
+Copy the - Metricbeat-Config
+Update the metricbeat-config.yml file to include the ELK private IP 10.1.0.5 as below from root@9ddf6fe7eb3f:~# nano /etc/ansible/filebeat-config.yml
+
+
+## Run the playbook using this command ansible-playbook filebeat-playbook.yml and navigate to Kibana 
