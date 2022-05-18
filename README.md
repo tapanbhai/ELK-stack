@@ -307,7 +307,19 @@ Run: curl -L -O https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bb
    ```
 
 Copy the - Metricbeat-Config
+
 Update the metricbeat-config.yml file to include the ELK private IP 10.1.0.5 as below from root@9ddf6fe7eb3f:~# nano /etc/ansible/filebeat-config.yml
 
 
 ## Run the playbook using this command ansible-playbook filebeat-playbook.yml and navigate to Kibana 
+
+```
+Logs : Add log data > System logs (DEB) > 5:Module Status > Check Incoming data on Kibana to check that the installation worked as expected.
+```
+
+•	How do I specify which machine to install the ELK server on versus which to install Filebeat on? - I have specified two separate groups in the etc/ansible/hosts file. One of the group will be webservers which has the IPs of the 3 VMs that I will install Filebeat to. The other group is named ELKserver which will have the IP of the VM I will install ELK to.
+
+•	Which URL do you navigate to in order to check that the ELK server is running? http://51.103.156.141:5601/
+
+
+![Elk-stack Project](Diagrams/kibana.png)
