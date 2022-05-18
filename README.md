@@ -113,3 +113,6 @@ o	No Agents Required
 o	There is no need of agents or software when you want to automate with the client system or hosts.
 o	Cloud Provisioning
 o	By using Ansible we can cloud platforms and virtualized hosts , network devices etc.
+
+The playbook implements the following tasks:
+- In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
