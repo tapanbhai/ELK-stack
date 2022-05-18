@@ -116,3 +116,125 @@ o	By using Ansible we can cloud platforms and virtualized hosts , network device
 
 The playbook implements the following tasks:
 - In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc.
+
+## 	Specify a different group of machines:
+
+```
+- name: Config elk VM with Docker
+	    hosts: elk
+	    become: true
+	    tasks:
+```
+
+## Install Docker.io
+
+```
+- name: Install docker.io
+     apt:
+     update_cache: yes
+     force_apt_get: yes
+     name: docker.io
+     state: present
+```
+
+## Installs Python3-pip
+
+```
+- name: Install python3-pip
+     apt: 
+     force_apt_get: yes 
+     name: python3-pip 
+     state: present 
+```
+
+## Use pip module (It will default to pip3)
+
+```
+- name: Install Docker module
+     pip:
+     name: docker
+     state: present
+     `docker`, which is the Docker Python pip module.      
+```
+
+## Increase Virtual Memory
+
+```
+- name: Use more memory
+        sysctl:
+        name: vm.max_map_count
+        value: '262144'
+        state: present
+        reload: yes
+```
+
+## Download and Launch ELK Docker Container (image sebp/elk)
+
+```
+- name: Download and launch a docker elk container
+    docker_container:
+    name: elk
+    image: sebp/elk:761
+    state: started
+    restart_policy: always
+```
+
+## Published ports 5044, 5601 and 9200 were made available
+
+```
+- published_ports:
+   -  5601:5601
+   -  9200:9200
+   -  5044:5044   
+```
+
+5601 (Kibana web interface)
+9200 (Elasticsearch JSON interface)
+5044 (Logstash Beats interface, receive logs from Beats such as Filebeat)
+
+## JBOX
+
+
+## ELK-SERVER
+
+## WEB1
+
+## WEB2
+
+## Target Machines & Beats
+
+This ELK server is configured to monitor the following machines: List the IP addresses of the machines you are monitoring
+•	Web-1: 10.1.0.8
+
+•	Web-2: 10.1.0.9
+
+We have installed the following Beats on these machines:
+
+•	Filebeat_module_status
+
+•	Metricbeat_module_status
+
+These Beats allow us to collect the following information from each machine:
+•	TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., Winlogbeat collects Windows logs, which we use to track user logon events, etc. Filebeat will be used to collect log files from specfic files in particular Apache, Mircosoft Azure tools and web servers, MySQL databases #[screeshoot of filebeat module kibana dashboard]#
+
+•	Filebeat_syslog_Dashboard
+
+•	Metricbeat_Docker_overview_Dashboard
+
+Metricbeat will be used to monitor VM stats, per cpu core stats, per filesystem stats, memory stats and network stats #[screenshot of Kibana Docker containers[metricbeat docker] ecs]# #[screenshot of Kibana Host overview[metricbeat docker-web-1] metrics] #[screenshot of Kibana Host overview[metricbeat docker-web-2] metrics]
+•	[Metricbeat_Kibana_Docker_Host_Web-1_and_Web-2_Overview_and_Container_ECS] -screenshot
+
+
+## Using The Playbook
+
+In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
+Verify the Public IP address to see if it has changed. [What Is My IP?](https://www.whatismyip.com/) If changed then update the Security Rules that uses the My Public IPv4
+SSH into the control node and follow the steps below:
+
+•	Copy the YML file to ansible folder.
+
+•	Update the config file to include remote user and port
+
+•	Run the playbook, and navigate to kibana((Users IP address):5601 to check that the installation worked as expected.
+
+
