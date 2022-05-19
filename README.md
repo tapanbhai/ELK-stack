@@ -323,3 +323,32 @@ Logs : Add log data > System logs (DEB) > 5:Module Status > Check Incoming data 
 
 
 ![Elk-stack Project](Diagrams/kibana.png)
+
+
+As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc.
+
+| COMMAND                                | RESULT                                        |
+|----------------------------------------|-----------------------------------------------|
+| ssh-keygen                             | GENERATE A SSH KEY TO SETUP VM                |
+| sudo cat .ssh/id_rsa.pub               | VIEW THE SSH PUBLIC KEY                       |
+| ssh azureuser@jumpboxpublic IP address | LOGGING INTO THE JUMPBOX                      |
+| sudo docker ps -a                      | VIEWING ALL THE ACTIVE/INACTIVE CONTAINERS    |
+| sudo docker start hopeful_hypatia      | START UP THE CONTAINER                        |
+| sudo docker attach hopeful_hypatia     | SSH TO THE CONTAINER                          |
+| cd /etc/ansible                        | NAVIGATE TO THE ANSIBLE FOLDER                |
+| nano /etc/ansible/hosts                | NAVIGATE TO THE HOSTS CONFIG                  |
+| nano /etc/ansible/ansible.cfg          | NAVIGATE TO THE ANSIBLE CONFIG FILE           |
+| ssh ansible@Web1 IP address            | SSH LOG INTO WEB1                             |
+| ssh ansible@Web2 IP address            | SSH LOG INTO WEB2                             |
+| ssh ansible@ELKserver IP address       | SSH LOG INTO ELKSERVER                        |
+| sudo apt-get update                    | UPDATE ALL PACKAGES                           |
+| sudo apt install docker.io             | INSTALL DOCKER APPLICATION                    |
+| sudo docker service start              | START UP DOCKER APPLICATION                   |
+| sudo systemctl status docker           | CHECK STATUS OF THE DOCKER APPLICATION        |
+| http://ELK_IP_ADDRESS:5601//app/kibana | NAVIGATE TO THE KIBANA SITE THROUGH PORT 5601 |
+| nano filebeat-config.yml               | EDIT FILEBEAT-CONFIG FILE                     |
+| nano filebeat-playbook.yml             | EDIT FILEBEAT PLAYBOOK                        |
+| nano metricbeat-config.yml             | EDIT METRICBEAT-CONFIG FILE                   |
+| nano metricbeat-playbook.yml           | EDIT METRICBEAT PLAYBOOK                      |
+|                                        |                                               |
+|                                        |                                               |
