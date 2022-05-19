@@ -258,7 +258,7 @@ SSH into the control node and follow the steps below:
 
 •	Update the filebeat-config.yml file to include the ELK private IP 10.1.0.8 as below from root@9ddf6fe7eb3f:~# nano /etc/ansible/filebeat-config.yml
 
-## Configuration
+## Configuration.
 
 ```
 output.elasticsearch:
