@@ -194,12 +194,24 @@ The playbook implements the following tasks:
 
 ## JBOX
 
+![Elk-stack Project](Diagrams/jumpbox1.png)
+
+![Elk-stack Project](Diagrams/jumpbox2.png)
+
 
 ## ELK-SERVER
 
+![Elk-stack Project](Diagrams/elkserver.png)
+
+
 ## WEB1
 
+![Elk-stack Project](Diagrams/web1.png)
+
 ## WEB2
+
+![Elk-stack Project](Diagrams/web2.png)
+
 
 ## Target Machines & Beats
 
@@ -213,7 +225,13 @@ We have installed the following Beats on these machines:
 
 •	Filebeat_module_status
 
+![Elk-stack Project](Diagrams/filebeat%20kibana.png)
+
+
 •	Metricbeat_module_status
+
+![Elk-stack Project](Diagrams/metricbeat%20kibana.png)
+
 
 These Beats allow us to collect the following information from each machine:
 •	TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., Winlogbeat collects Windows logs, which we use to track user logon events, etc. Filebeat will be used to collect log files from specfic files in particular Apache, Mircosoft Azure tools and web servers, MySQL databases #[screeshoot of filebeat module kibana dashboard]#
