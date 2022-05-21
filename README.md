@@ -6,7 +6,6 @@
 
 The files in this repository were used to configure the network depicted below.
 
-ELK-stack/Diagrams/ELK-stack Project.drawio.png
 
 ![Elk-stack Project](Diagrams/ELK-stack%20Project.drawio.png)
 
@@ -14,7 +13,7 @@ ELK-stack/Diagrams/ELK-stack Project.drawio.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
  
-  - https://drive.google.com/file/d/1R0Q8StVEFJAjwF0VnQ-X8luaBktRIkP1/view?usp=sharing
+  
 
 This document contains the following details:
 - Description of the Topology
